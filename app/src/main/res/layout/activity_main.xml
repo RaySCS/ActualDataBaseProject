@@ -11,11 +11,13 @@
         android:id="@+id/imageView"
         android:layout_width="225dp"
         android:layout_height="225dp"
-        android:layout_marginTop="376dp"
+        android:layout_marginTop="368dp"
         android:layout_marginEnd="184dp"
         android:layout_marginRight="184dp"
         android:onClick="openAddGameActivity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/plussign" />
+        app:srcCompat="@drawable/ballll" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
