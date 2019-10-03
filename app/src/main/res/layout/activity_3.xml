@@ -93,4 +93,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/enterb" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="130dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginRight="115dp"
+        android:onClick="openData"
+        android:text="Open Data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
