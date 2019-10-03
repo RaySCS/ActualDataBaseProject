@@ -14,11 +14,11 @@ public class Activity2 extends AppCompatActivity {
         setContentView(R.layout.activity_2);
     }
 
-    public void openAddPlayerActivity(View view){
-        Intent intent = new Intent(this, Activity3.class);
-        startActivity(intent);
-        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);//slide to right
-    }
+//    public void openAddPlayerActivity(View view){
+//        Intent intent = new Intent(this, Activity3.class);
+//        startActivity(intent);
+//        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);//slide to right
+//    }
 
 
 }
