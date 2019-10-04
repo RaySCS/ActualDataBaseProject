@@ -14,7 +14,9 @@ import android.widget.ViewFlipper;
 
 public class MainActivity extends AppCompatActivity {
     private ViewFlipper animate;
-//    long timer =
+    private Button button1;
+    private Button button2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +24,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         animate = findViewById(R.id.ANIMATE);
-        Button[] buttons = new Button[9];
+//        Button[] buttons = new Button[9];
+        button1 = findViewById(R.id.button3);
+        Integer side1 = Integer.getInteger(button1.getText().toString(), -1);
+
+        button2 = findViewById(R.id.button4);
+        Integer side2 = Integer.getInteger(button2.getText().toString(), -1);
+
+        int[] buttons = {side1,side2 };
 
         int[] images = {R.drawable.download, R.drawable.try1};
 
@@ -43,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         imageButton.setBackgroundResource(image);
 
         animate.addView(imageButton);
-        animate.setFlipInterval(4000);
+        animate.setFlipInterval(2000);
         animate.setAutoStart(true);
 
         animate.setInAnimation(this, android.R.anim.slide_in_left);
