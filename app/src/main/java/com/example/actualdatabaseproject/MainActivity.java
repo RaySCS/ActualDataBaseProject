@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         animate = findViewById(R.id.ANIMATE);
-        Button buttons[] = new Button[9];
+        Button[] buttons = new Button[9];
 
-        int images[] = {R.drawable.download,R.drawable.try1 };
+        int[] images = {R.drawable.download, R.drawable.try1};
 
 
 //        for (int i=0; i < images.length; i++){
