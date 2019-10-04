@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 public class Activity3 extends AppCompatActivity {
 
+    EditText infoEntry0;
     EditText infoEntry1;
     EditText infoEntry2;
     EditText infoEntry3;
@@ -23,6 +24,7 @@ public class Activity3 extends AppCompatActivity {
     int displayAssists;
     int displaySteals;
     int displayRebounds;
+    String pName;
 
     private static final String TAG = "Activity3";
 
@@ -32,7 +34,7 @@ public class Activity3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_3);
-
+        infoEntry0 = (EditText)findViewById(R.id.infoEntry0);
         infoEntry1 = (EditText)findViewById(R.id.infoEntry1);
         infoEntry2 = (EditText)findViewById(R.id.infoEntry2);
         infoEntry3 = (EditText)findViewById(R.id.infoEntry3);
@@ -43,12 +45,18 @@ public class Activity3 extends AppCompatActivity {
     }
 
     public void submitInfo(View view){
+        pName = infoEntry0.getText().toString();
+        AddData(pName);
         displayMinutes = Integer.parseInt(infoEntry1.getText().toString());
         AddData(Integer.toString(displayMinutes));
-//        displayPoints = Integer.parseInt(infoEntry2.getText().toString());
-//        displayAssists = Integer.parseInt(infoEntry3.getText().toString());
-//        displaySteals = Integer.parseInt(infoEntry4.getText().toString());
-//        displayRebounds = Integer.parseInt(infoEntry5.getText().toString());
+        displayPoints = Integer.parseInt(infoEntry2.getText().toString());
+        AddData(Integer.toString(displayPoints));
+        displayAssists = Integer.parseInt(infoEntry3.getText().toString());
+        AddData(Integer.toString(displayAssists));
+        displaySteals = Integer.parseInt(infoEntry4.getText().toString());
+        AddData(Integer.toString(displaySteals));
+        displayRebounds = Integer.parseInt(infoEntry5.getText().toString());
+        AddData(Integer.toString(displayRebounds));
 
     }
 

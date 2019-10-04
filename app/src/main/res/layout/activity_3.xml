@@ -8,28 +8,27 @@
     tools:context=".Activity3">
 
     <EditText
-        android:id="@+id/infoEntry1"
+        android:id="@+id/infoEntry0"
         android:layout_width="197dp"
         android:layout_height="55dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="256dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="248dp"
         android:ems="10"
-        android:inputType="number"
-        android:hint="Minutes"
+        android:hint="Name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/infoEntry2"
+        android:id="@+id/infoEntry1"
         android:layout_width="197dp"
         android:layout_height="55dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="516dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="332dp"
         android:ems="10"
+        android:hint="Minutes"
         android:inputType="number"
-        android:hint="Steals"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,12 +36,12 @@
         android:id="@+id/infoEntry3"
         android:layout_width="197dp"
         android:layout_height="55dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="348dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="424dp"
         android:ems="10"
-        android:inputType="number"
         android:hint="Points"
+        android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,12 +49,12 @@
         android:id="@+id/infoEntry4"
         android:layout_width="197dp"
         android:layout_height="55dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="432dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="508dp"
         android:ems="10"
-        android:inputType="number"
         android:hint="Assists"
+        android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,12 +62,25 @@
         android:id="@+id/infoEntry5"
         android:layout_width="197dp"
         android:layout_height="55dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="676dp"
         android:ems="10"
-        android:inputType="number"
         android:hint="Rebounds"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/infoEntry2"
+        android:layout_width="197dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="592dp"
+        android:ems="10"
+        android:hint="Steals"
+        android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -101,7 +113,6 @@
         android:layout_marginTop="164dp"
         android:layout_marginEnd="115dp"
         android:layout_marginRight="115dp"
-        android:onClick="openData"
         android:text="Open Data"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
