@@ -33,9 +33,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP IF TABLE EXISTS " + TABLE_NAME);
         onCreate(db);
     }
-
+    SQLiteDatabase db;
     public boolean addData(String item1) {
-        SQLiteDatabase db = this.getWritableDatabase();
+        db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL2, item1);
 
@@ -48,6 +48,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
         }
     }
+
+//    public ArrayList<String> getSpecificColumn(String book) {
+//        ArrayList<String> AUTHOR_ARRAYLIST;
+//        AUTHOR_ARRAYLIST = new ArrayList<String>();
+//
+//        db = getWritableDatabase;
+//        String WHERE = Book + "=" + book;
+//        Cursor cursor = db.query(BookAuthor_TAB, BookAuthor_AllKeys, WHERE, null, null, null, null);
+//
+//        while(cursor.moveToNext())
+//        {
+//            String AUTHOR = cursor.getString(cursor.getColumnIndex(Author));
+//            AUTHOR_ARRAYLIST.add(AUTHOR);
+//        }
+//
+//        return AUTHOR_ARRAYLIST;
+//    }
+
+
+
     public Cursor getListContents(){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor data = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
