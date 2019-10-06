@@ -25,6 +25,7 @@ public class Activity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
+        scrollPlayersView = (ListView)findViewById(R.id.scrollPlayersView);
         minuteDisplay = (TextView)findViewById(R.id.minuteDisplay);
         pointsDisplay = (TextView)findViewById(R.id.pointsDisplay);
         assistsDisplay = (TextView)findViewById(R.id.assistsDisplay);
@@ -34,22 +35,22 @@ public class Activity2 extends AppCompatActivity {
         myDB = new DatabaseHelper(this);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items);//add comma then array of names
         scrollPlayersView.setAdapter(adapter);
-//        scrollPlayersView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Cursor cursor = myDB.getListContents();
-//                if(cursor.getCount() == 0){
-//                    Toast.makeText(Activity2.this,"NO DATA", Toast.LENGTH_SHORT).show();
-//                }
-//                else{
-//                    while(cursor.moveToNext()){
-//                        for(int i = 0;i<cursor.getColumnCount();i++){
-//                            System.out.println(cursor.getString(i));
-//                        }
-//                    }
-//                }
-//            }
-//        });
+        scrollPlayersView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Cursor cursor = myDB.getListContents();
+                if(cursor.getCount() == 0){
+                    Toast.makeText(Activity2.this,"NO DATA", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    while(cursor.moveToNext()){
+                        for(int i = 0;i<cursor.getColumnCount();i++){
+                            System.out.println(cursor.getString(i));
+                        }
+                    }
+                }
+            }
+        });
     }
 
     public void openAddPlayerActivity(View view){
