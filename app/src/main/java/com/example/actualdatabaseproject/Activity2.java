@@ -30,13 +30,13 @@ public class Activity2 extends AppCompatActivity {
         assistsDisplay = (TextView)findViewById(R.id.assistsDisplay);
         reboundsDisplay = (TextView)findViewById(R.id.reboundsDisplay);
         stealsDisplay = (TextView)findViewById(R.id.stealsDisplay);
+
         myDB = new DatabaseHelper(this);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items);//add comma then array of names
         scrollPlayersView.setAdapter(adapter);
-        scrollPlayersView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //this is what happens when you click a specific item on the listview
+//        scrollPlayersView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 //                Cursor cursor = myDB.getListContents();
 //                if(cursor.getCount() == 0){
 //                    Toast.makeText(Activity2.this,"NO DATA", Toast.LENGTH_SHORT).show();
@@ -48,8 +48,8 @@ public class Activity2 extends AppCompatActivity {
 //                        }
 //                    }
 //                }
-            }
-        });
+//            }
+//        });
     }
 
     public void openAddPlayerActivity(View view){
