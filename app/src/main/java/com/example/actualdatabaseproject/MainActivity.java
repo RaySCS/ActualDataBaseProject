@@ -3,13 +3,10 @@ package com.example.actualdatabaseproject;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.ViewAnimator;
 import android.widget.ViewFlipper;
 
 public class MainActivity extends AppCompatActivity {
@@ -62,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openAddGameActivity(View view){
-        Intent intent = new Intent(this, Activity2.class);
+        Intent intent = new Intent(this, DisplayPlayerPage.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);//slide to right
     }
