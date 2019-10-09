@@ -5,14 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ViewFlipper;
 
 public class MainActivity extends AppCompatActivity {
     private ViewFlipper animate;
-    private Button button1;
-    private Button button2;
+
 
 
     @Override
@@ -21,26 +19,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         animate = findViewById(R.id.ANIMATE);
-//        Button[] buttons = new Button[9];
-        button1 = findViewById(R.id.button3);
-        Integer side1 = Integer.getInteger(button1.getText().toString(), -1);
 
-        button2 = findViewById(R.id.button4);
-        Integer side2 = Integer.getInteger(button2.getText().toString(), -1);
-
-        int[] buttons = {side1,side2 };
-
-        int[] images = {R.drawable.download, R.drawable.try1};
-
-
-//        for (int i=0; i < images.length; i++){
-//            flipperImages(images[i]);
-//        }
+        int[] images = {R.drawable.sixerslogo, R.drawable.raptors, R.drawable.denverlogo,
+                R.drawable.nets, R.drawable.pistons, R.drawable.spurs,
+                R.drawable.celtics, R.drawable.mavericks, R.drawable.wizards,
+                R.drawable.knicks, R.drawable.pelicans, R.drawable.warriors,
+                R.drawable.rockets, R.drawable.trailblazers, R.drawable.thunder};
 
         for (int image:images){
             flipperImages(image);
         }
-
 
     }
 
@@ -49,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         imageButton.setBackgroundResource(image);
 
         animate.addView(imageButton);
-        animate.setFlipInterval(2000);
+        animate.setFlipInterval(1000);
         animate.setAutoStart(true);
 
         animate.setInAnimation(this, android.R.anim.slide_in_left);

@@ -63,6 +63,12 @@ public class DisplayPlayerPage extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void homePage(View view){
+        Intent intent = new Intent(DisplayPlayerPage.this, MainActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);//slide to right
+    }
+
 
 }
 
