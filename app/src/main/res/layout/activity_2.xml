@@ -7,40 +7,41 @@
     android:background="@drawable/hardwoodfloor"
     tools:context=".DisplayPlayerPage">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="150dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:onClick="openAddPlayerActivity"
-        android:text="ADD PLAYER"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="148dp"
         android:layout_height="129dp"
-        android:layout_marginEnd="396dp"
-        android:layout_marginRight="396dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
         android:layout_marginBottom="38dp"
         android:background="@drawable/backarrow"
         android:onClick="homePage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollPlayersView" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollPlayersView"
+        app:layout_constraintVertical_bias="0.997" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:onClick="openAddPlayerActivity"
+        android:text="ADD PLAYER"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/scrollPlayersView"
         android:layout_width="414dp"
-        android:layout_height="0dp"
+        android:layout_height="254dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginBottom="568dp"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
+        android:layout_marginTop="104dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -111,6 +112,7 @@
         android:layout_marginStart="43dp"
         android:layout_marginLeft="43dp"
         android:layout_marginTop="29dp"
+        android:textSize="36sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewMinutes" />
 
@@ -121,6 +123,7 @@
         android:layout_marginTop="31dp"
         android:layout_marginEnd="121dp"
         android:layout_marginRight="121dp"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewPoints" />
 
@@ -131,6 +134,7 @@
         android:layout_marginStart="57dp"
         android:layout_marginLeft="57dp"
         android:layout_marginTop="25dp"
+        android:textSize="36sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAssists" />
 
@@ -141,6 +145,7 @@
         android:layout_marginTop="34dp"
         android:layout_marginEnd="111dp"
         android:layout_marginRight="111dp"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewRebounds" />
 
@@ -151,7 +156,18 @@
         android:layout_marginStart="57dp"
         android:layout_marginLeft="57dp"
         android:layout_marginTop="34dp"
+        android:textSize="36sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSteals" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="386dp"
+        android:layout_height="93dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="PLAYERS"
+        android:textSize="72sp"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="11dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

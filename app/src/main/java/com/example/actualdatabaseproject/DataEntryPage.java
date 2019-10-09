@@ -20,7 +20,7 @@ public class DataEntryPage extends AppCompatActivity {
     DatabaseHelper myDB;
 
 
-
+    String displayName;
     int displayMinutes;
     int displayPoints;
     int displayAssists;
@@ -40,6 +40,7 @@ public class DataEntryPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_3);
 
+        infoEntry0 = findViewById(R.id.infoEntry0);
         infoEntry1 = findViewById(R.id.infoEntry1);
         infoEntry2 = findViewById(R.id.infoEntry2);
         infoEntry3 = findViewById(R.id.infoEntry3);
@@ -50,6 +51,9 @@ public class DataEntryPage extends AppCompatActivity {
     }
 
     public void submitInfo(View view){
+        displayName = infoEntry0.getText().toString();
+        AddData(displayName);
+
         displayMinutes = Integer.parseInt(infoEntry1.getText().toString());
         AddData(Integer.toString(displayMinutes));
 
@@ -76,6 +80,7 @@ public class DataEntryPage extends AppCompatActivity {
         Intent intent = new Intent(DataEntryPage.this, ViewListContent.class);
         startActivity(intent);
     }
+
 
     public void playerPage(View view){
         Intent intent = new Intent(DataEntryPage.this, DisplayPlayerPage.class);
